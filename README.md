@@ -23,3 +23,12 @@ fqscan targets.fasta data_files
 
 The default behavior is to consider each FASTQ separately. If you have read pairs, you can use the `--pair` option 
 to consider the pair together when mapping.
+
+The program will output the number of reads that matched the target sequences in each file or read pair:
+
+```shell
+> fqscan targets.fasta data_files
+# [bwa output omitted]
+sample1_R1.fastq sample1_R2.fastq 1245
+sample2_R1.fastq sample2_R2.fastq 192
+```
